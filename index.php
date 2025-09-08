@@ -49,7 +49,7 @@ foreach($totalspins as $spin) {
 
 if($wins > $maxwinnings){
     $wins = $maxwinnings;
-    echo "Winnings Passed Max- payout set to 500";
+    echo "Winnings Passed Max- payout set to $500";
 }
 echo "Total spins: $i\n";
 echo "Total winnings: $$wins\n";
