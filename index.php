@@ -10,7 +10,7 @@ $i = 0;
 $wins = 0;
 
 // run the slot machine
-while($i<=$maxspins and $wins <= $maxwinnings) {
+while($i < $maxspins && $wins < $maxwinnings) {
 
     //holds the results of the spin
     $spin =[];
@@ -44,4 +44,4 @@ foreach($totalspins as $spin) {
     echo "Spin: " . $spin['spin'] . " - Payout: " . $spin['payout'] . "\n";
 }
 echo "Total spins: $i\n";
-echo "Total winnings: $wins\n";
+echo "Total winnings: $$wins\n";
