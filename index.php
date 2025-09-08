@@ -10,7 +10,7 @@ $i = 0;
 $wins = 0;
 
 // run the slot machine
-while($i < $maxspins && $wins < $maxwinnings) {
+while($i < $maxspins && $wins < $maxwinnings){
 
     //holds the results of the spin
     $spin =[];
@@ -36,7 +36,12 @@ while($i < $maxspins && $wins < $maxwinnings) {
 
     // increments spin counter and winnings
     $i++;
-    $wins += $payout; 
+    //fixing max wins logic
+    if($wins > $maxwinnings){
+        $wins = $maxwinnings;
+    }else{
+        $wins += $payout;
+    }
 }
 
 // display results
