@@ -36,17 +36,20 @@ while($i < $maxspins && $wins < $maxwinnings){
 
     // increments spin counter and winnings
     $i++;
-    //fixing max wins logic
-    if($wins > $maxwinnings){
-        $wins = $maxwinnings;
-    }else{
-        $wins += $payout;
-    }
+    $wins += $payout;
 }
+
+//winnings cut
+//fixing max wins logic
 
 // display results
 foreach($totalspins as $spin) {
     echo "Spin: " . $spin['spin'] . " - Payout: " . $spin['payout'] . "\n";
+}
+
+if($wins > $maxwinnings){
+    $wins = $maxwinnings;
+    echo "Winnings Passed Max- payout set to 500";
 }
 echo "Total spins: $i\n";
 echo "Total winnings: $$wins\n";
